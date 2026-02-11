@@ -1,11 +1,15 @@
-import './App.css'
+import './styles/App.css'
+import Header from './components/Header'
+import Main from './components/Main'
 
 function App() {
 
-  return (
-    <>
-      
-    </>
+
+    return (
+    <div className='min-h-screen bg-[#232829]'>
+      <Header />
+      <Main />
+    </div>
   )
 }
 
