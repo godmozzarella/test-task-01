@@ -1,0 +1,20 @@
+html {
+  scroll-behavior: smooth;
+  background-color: #232829;
+  margin-top: 7rem;
+}
+
+@keyframes blinking {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-blinking {
+  animation: blinking 1.5s ease-in-out infinite;
+}
+
+
