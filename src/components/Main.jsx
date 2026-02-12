@@ -1,6 +1,5 @@
 
 import Guy from '../assets/img/guy.svg'
-import Agreement from './Agreement'
 import Rules from './Rules'
 import Guarantees from './Guarantees'
 import Payment from './Payment'
@@ -22,7 +21,7 @@ const Main = () => {
 							<div className='flex flex-col gap-4 items-start justify-start'>
 								<TariffsGrid/>
 								<Rules/>
-								
+								<Payment/>
 							</div>	
 						</section>
 

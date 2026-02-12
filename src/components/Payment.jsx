@@ -1,8 +1,10 @@
+import Agreement from "./Agreement";
 import Button from "./Button";
 
 const Payment = () => {
 	return (
 		<>
+			<Agreement/>
 			<Button
 				id="buy-button"
 				text="Купить"
