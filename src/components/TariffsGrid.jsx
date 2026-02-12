@@ -31,12 +31,21 @@ const TariffsGrid = (props) =>{
 
 
 	return (
-		<div className="flex flex-wrap gap-4 ">
-			{sortedTariffs.map((tariff) => (
-				<TariffCard key={tariff.id} tariff={tariff} isExpired={isExpired} />
-			))}
-		</div>
-	)
+    <div className="flex flex-col gap-4 w-full lg:flex-row lg:flex-wrap lg:items-stretch">
+      {sortedTariffs.map((tariff, index) => (
+        <div
+        // ! Пришлось прибегнуть к костылю, так как в апи есть дублирующие id у тарифов
+          key={`${tariff.id}-${index}`}
+          className={`
+            w-full
+        		lg:${index === 0 ? "w-full" : "flex-1 flex"}
+          `}
+        >
+          <TariffCard tariff={tariff} isExpired={isExpired} />
+        </div>
+      ))}
+    </div>
+  )
 }
 
 export default TariffsGrid

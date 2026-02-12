@@ -7,10 +7,10 @@ const Guarantees = () =>{
 			<Button
 				id="guarantees-button"
 				text="гарантия возврата 30 дней"
-				className='bg-[#2D3233] px-7.5 py-4 border border-[#81FE95] rounded-[1.875rem] text-[#81FE95] text-2xl'
+				className='bg-[#2D3233] px-7.5 py-4 border border-[#81FE95] rounded-[1.875rem] text-[#81FE95] text-[clamp(0.8rem, 3vw, 1.5rem)]'
 			/>
 
-			<p className="text-[#DCDCDC] text-2xl font-normal">Мы уверены, что наш план сработает для тебя и ты увидишь видимые результаты уже через 4 недели! Мы даже готовы полностью вернуть твои деньги в течение 30 дней с момента покупки, если ты не получишь видимых результатов.</p>
+			<p className="text-[#DCDCDC] text-[clamp(0.8rem, 3vw, 1.5rem)] font-normal">Мы уверены, что наш план сработает для тебя и ты увидишь видимые результаты уже через 4 недели! Мы даже готовы полностью вернуть твои деньги в течение 30 дней с момента покупки, если ты не получишь видимых результатов.</p>
 		</section>
 	)
 }

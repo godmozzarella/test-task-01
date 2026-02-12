@@ -4,7 +4,7 @@ import Main from './components/Main'
 import { useEffect, useState } from 'react'
 
 function App() {
-  const [secondsLeft, setSecondsLeft] = useState(12)
+  const [secondsLeft, setSecondsLeft] = useState(120)
   const [isExpired, setIsExpired] = useState(false)
 
   useEffect(() => {
