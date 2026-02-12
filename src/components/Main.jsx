@@ -5,10 +5,8 @@ import Guarantees from './Guarantees'
 import Payment from './Payment'
 import TariffsGrid from './TariffsGrid'
 
-const Main = () => {
-
-	
-
+const Main = (props) => {
+    const { isExpired } = props;
     return (
         <main className='w-[70%] flex flex-col gap-8 mx-auto mt-10 mb-40'>
 
@@ -19,7 +17,7 @@ const Main = () => {
 						<section className='w-full flex flex-row gap-4 items-start'>
 							<img src={Guy} alt="Guy" />
 							<div className='flex flex-col gap-4 items-start justify-start'>
-								<TariffsGrid/>
+								<TariffsGrid isExpired={isExpired}/>
 								<Rules/>
 								<Payment/>
 							</div>	

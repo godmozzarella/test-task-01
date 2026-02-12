@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import TariffCard from "./TariffCard";
 
-const TariffsGrid = () =>{
+const TariffsGrid = (props) =>{
+
+	const { isExpired } = props;
+
 	 const [tariffs, setTariffs] = useState([]);
 	 const [loading, setLoading] = useState(true)
 	 const [error, setError] = useState(null);
@@ -30,7 +33,7 @@ const TariffsGrid = () =>{
 	return (
 		<div className="flex flex-wrap gap-4 ">
 			{sortedTariffs.map((tariff) => (
-				<TariffCard key={tariff.id} tariff={tariff} />
+				<TariffCard key={tariff.id} tariff={tariff} isExpired={isExpired} />
 			))}
 		</div>
 	)

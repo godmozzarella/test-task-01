@@ -1,14 +1,25 @@
 
 
-const Agreement = () => {
+const Agreement = (props) => {
+	const { 
+		isAgreementChecked,
+		setIsAgreementChecked,
+		showError
+	} = props;
+
+
 	return (
 		<div className="flex items-center gap-2 max-w-[649px]">
-			<input className="
+			<input className={`
 				w-8 aspect-square appearance-none border border-[#606566] rounded 
 				bg-[#232829] cursor-pointer
 				checked:bg-[url('/src/assets/img/check.svg')]
-				checked:bg-center checked:bg-no-repeat checked:bg-contain"
-			id="agreement" type="checkbox" />
+				checked:bg-center checked:bg-no-repeat checked:bg-contain
+				${showError ? 'border-[#f10606]' : ''}`}
+			id="agreement" type="checkbox"
+			checked={isAgreementChecked}
+			onChange={() => setIsAgreementChecked(!isAgreementChecked)}
+			/>
 
 			<label className='m-0 font-normal
 				text-[1rem tracking-normal text-[#CDCDCD]'

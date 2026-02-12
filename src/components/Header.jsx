@@ -1,21 +1,13 @@
 
-import { useState, useEffect } from 'react'
 import Star from '../assets/img/star.svg'
 
-const Header = () => {
+const Header = (props) => {
 
-	const [secondsLeft, setSecondsLeft] = useState(120) 
-
-  useEffect(() => {
-    if (secondsLeft <= 0) return
-
-    const interval = setInterval(() => {
-      setSecondsLeft(prev => prev - 1)
-    }, 1000)
-
-    return () => clearInterval(interval)
-  }, [secondsLeft])
-
+	const { 
+    secondsLeft,
+    isExpired
+   } = props;
+ 
   const minutes = Math.floor(secondsLeft / 60)
   const seconds = secondsLeft % 60
   const isWarning = secondsLeft <= 30
@@ -26,9 +18,14 @@ const Header = () => {
             <h1 className='text-[1.5rem] text-white font-semibold m-0'>Успейте открыть пробную неделю</h1>
 						<div className="flex items-center gap-2 font-[Raleway] font-bold text-[2.5rem]">
 							<img src={Star} alt="star" width={14} />
-							<span className={`text-[#FFBB00] ${blinkClass}`}>
+              {
+                isExpired ? <span className="text-[#FFBB00]">Время вышло :(</span> 
+                : 
+                <span className={`text-[#FFBB00] ${blinkClass}`}>
 								   {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
 								</span>
+              }
+							
 							<img src={Star} alt="star" width={14} />
 						</div>
         </header>
