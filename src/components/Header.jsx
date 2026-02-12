@@ -22,7 +22,7 @@ const Header = () => {
   const blinkClass = isWarning ? 'animate-pulse text-red-500' : ''
 	
     return (
-        <header className='fixed top-0 w-full mx-auto bg-[#1D5B43] py-2 flex flex-col items-center'>
+        <header className='fixed top-0 w-full mx-auto bg-[#1D5B43] py-2 flex flex-col items-center z-100'>
             <h1 className='text-[1.5rem] text-white font-semibold m-0'>Успейте открыть пробную неделю</h1>
 						<div className="flex items-center gap-2 font-[Raleway] font-bold text-[2.5rem]">
 							<img src={Star} alt="star" width={14} />

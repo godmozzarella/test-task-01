@@ -1,3 +1,4 @@
+
 import Guy from '../assets/img/guy.svg'
 import Agreement from './Agreement'
 import Rules from './Rules'
@@ -6,6 +7,9 @@ import Payment from './Payment'
 import TariffsGrid from './TariffsGrid'
 
 const Main = () => {
+
+	
+
     return (
         <main className='w-[70%] flex flex-col gap-8 mx-auto mt-10 mb-40'>
 
@@ -18,8 +22,7 @@ const Main = () => {
 							<div className='flex flex-col gap-4 items-start justify-start'>
 								<TariffsGrid/>
 								<Rules/>
-								<Agreement/>
-								<Payment/>
+								
 							</div>	
 						</section>
 
